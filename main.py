@@ -25,7 +25,12 @@ for playlist in items:
 index = int(input('Which playlist you want to download? (ex. 1): '))
 
 playlist_uid = uris[index]
-tracks = sp.playlist_tracks(playlist_uid)['items']
+results = sp.user_playlist_tracks(user,playlist_uid)
+tracks = results['items']
+while results['next']:
+    results = sp.next(results)
+    tracks.extend(results['items'])
+
 tracks_fullinfo = []
 for track in tracks:
     tracks_fullinfo.append(f"{track['track']['name']} - {track['track']['artists'][0]['name']}")
