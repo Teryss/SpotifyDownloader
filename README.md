@@ -7,6 +7,5 @@ Then using pytube it searches for every song on youtube and downloads highest bi
 Pytube module sometimes gives an error, but tracks are still downloaded.
 
 # Notes
-Please note that you need a client id and client secret. <br> They can be obtained through <a href="https://developer.spotify.com/">this link</a>.
-Also you're adviced to hide those credentials in environmental variables, but if it's not an option - paste correct values instead of None to the correct variable in script. <br>
-In this case I would also advice you to create a fresh account with VPN/tor so it doesn't get traced back to you or your data in case of leakage.
+You need your own <b>client id and client secret</b>. <br> They can be obtained through <a href="https://developer.spotify.com/">this link</a>.
+Also, it's a good practice to hide those credentials in environmental variables, but to make usage of this script easier - you can paste it in the right variables instead of None<br>
